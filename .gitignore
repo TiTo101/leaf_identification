@@ -133,4 +133,4 @@ dmypy.json
 .pyre/
 
 .DS_Store
-.vccode
+.vscode
