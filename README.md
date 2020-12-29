@@ -1,3 +1,4 @@
+![Format python code](https://github.com/TiTo101/leaf_identification/workflows/Format%20python%20code/badge.svg)
 # leaf_identification
 Deep learning project to identify leafs by holding them into the camera
 ![](./assets/leaf_pred.gif)
