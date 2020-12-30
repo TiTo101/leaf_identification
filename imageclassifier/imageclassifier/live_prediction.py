@@ -8,6 +8,9 @@ from tensorflow.keras.applications import inception_resnet_v2
 from utils import write_image, key_action, init_cam
 
 def predict_frame(frame, model, classes):
+    '''
+    helper function to make predictions which kind of leaf a picture shows
+    '''
     # convert from bgr to rgb
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     img_preprocessed = inception_resnet_v2.preprocess_input(frame_rgb)  
