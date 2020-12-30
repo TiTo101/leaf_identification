@@ -36,8 +36,8 @@ if __name__ == "__main__":
             cv2.namedWindow('frame', flags=cv2.WINDOW_GUI_NORMAL)
 
             # display the resulting frame
-            cv2.imshow('frame', frame)            
-      
+            cv2.imshow('frame', frame)
+
     finally:
         # when everything done, release the capture
         logging.info('quit webcam')

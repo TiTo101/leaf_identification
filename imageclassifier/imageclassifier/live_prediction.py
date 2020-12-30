@@ -7,7 +7,6 @@ from tensorflow.keras.applications import inception_resnet_v2
 from utils import key_action, init_cam
 
 
-
 def predict_frame(frame, model, classes):
     '''
     helper function to make predictions which kind of leaf a picture shows
@@ -83,4 +82,4 @@ if __name__ == "__main__":
         # when everything done, release the capture
         logging.info('quit webcam')
         webcam.release()
-        cv2.destroyAllWindows()    
+        cv2.destroyAllWindows()
