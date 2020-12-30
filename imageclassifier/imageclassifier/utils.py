@@ -3,6 +3,7 @@ import os
 from datetime import datetime
 import cv2
 
+
 def write_image(out, frame):
     """
     writes frame from the webcam as png file to disk. datetime is used as filename.
@@ -41,7 +42,9 @@ def init_cam(width, height):
     # Set properties. Each returns === True on success (i.e. correct resolution)
     assert cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
     assert cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
+    logging.info('web cam connected')
     return cap
+
 
 def add_text(text, frame):
     # Put some rectangular box on the image

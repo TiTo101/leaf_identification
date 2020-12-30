@@ -4,8 +4,8 @@ import os
 import cv2
 from utils import write_image, key_action, init_cam
 
-if __name__ == "__main__":
 
+if __name__ == "__main__":
     # folder to write images to
     out_folder = sys.argv[1]
     os.environ['KMP_DUPLICATE_LIB_OK']='True'
@@ -36,9 +36,10 @@ if __name__ == "__main__":
             
             # display the resulting frame
             cv2.imshow('frame', frame)            
-            
+      
     finally:
         # when everything done, release the capture
         logging.info('quit webcam')
         webcam.release()
         cv2.destroyAllWindows()
+        

@@ -1,11 +1,11 @@
-import sys
 import logging
 import os
 import cv2
-import tensorflow.keras as keras
 import numpy as np
+import tensorflow.keras as keras
 from tensorflow.keras.applications import inception_resnet_v2
-from utils import write_image, key_action, init_cam
+from utils import key_action, init_cam
+
 
 def predict_frame(frame, model, classes):
     '''
@@ -20,6 +20,7 @@ def predict_frame(frame, model, classes):
     print(result_dict)
     print(max(result_dict, key=result_dict.get))
     return result_dict
+
 
 saved_model_path = '../models/maple_oak_beech_basemodel_trained.h5'
 data_model = keras.models.load_model(saved_model_path)
@@ -68,9 +69,11 @@ if __name__ == "__main__":
             
             # display the resulting frame
             cv2.imshow('frame', frame)
-            
+
+
     finally:
         # when everything done, release the capture
         logging.info('quit webcam')
         webcam.release()
         cv2.destroyAllWindows()
+        
